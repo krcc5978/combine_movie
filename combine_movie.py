@@ -48,11 +48,8 @@ if __name__ == '__main__':
         sys.exit(0)
     files = sorted(glob.glob(dir_path + '/*.*'))
 
-    # 出力ファイル名
-    out_path = args.out
-
     crop_time = sys.maxsize
     if args.time is not None:
         crop_time = int(args.time)
 
-    comb_movie(files, out_path)
+    comb_movie(files, args.out)
